@@ -29,7 +29,7 @@ install_requirements = [
     "Pygments >= 1.6",
     "prompt_toolkit>=2.0.0,<2.1.0",
     "cli_helpers[styles] >= 1.0.1",
-    "PyJWT >= 0.5.2",
+    "PyJWT >= 2.1.0",
     "requests",
     "urllib3 >=1.21.1",
 ]
