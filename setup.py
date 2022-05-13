@@ -27,9 +27,9 @@ readme = open_file("README.md")
 install_requirements = [
     "click >= 4.1",
     "Pygments >= 1.6",
-    "prompt_toolkit>=2.0.0,<2.1.0",
+    "prompt_toolkit>=3.0.8", # 2.0.0,<2.1.0",
     "cli_helpers[styles] >= 1.0.1",
-    "PyJWT >= 0.5.2",
+    "PyJWT >= 2.4.0",
     "requests",
     "urllib3 >=1.21.1",
 ]
