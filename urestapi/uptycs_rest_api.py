@@ -5,6 +5,7 @@ import json
 import jwt
 import datetime
 import requests
+import time
 import urllib3
 import re
 
@@ -100,8 +101,8 @@ class uptycs_rest_call(object):
         self.header = {}
         utcnow = datetime.datetime.utcnow()
         date = utcnow.strftime("%a, %d %b %Y %H:%M:%S GMT")
-        authVar = jwt.encode({"iss": self.key}, self.secret, algorithm="HS256")
-        authorization = "Bearer %s" % (authVar.decode("utf-8"))
+        authVar = jwt.encode({"iss": self.key, 'exp': time.time() + 60}, self.secret, algorithm="HS256")
+        authorization = "Bearer %s" % (authVar)
         self.header["date"] = date
         self.header["Authorization"] = authorization
 
